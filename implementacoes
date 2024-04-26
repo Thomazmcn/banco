@@ -1,14 +1,14 @@
-arquivo contendo agencias existentes
-arquivo por agencia contendo suas contas com hash de senha
-arquivo de conta com saldo
-sistema com programaçao orientada por objeto
-  deve acessar arquivo de agencia
-    deve validar conta/senha
+bd sql contendo agencias existentes
+bd sql por agencia contendo suas contas com hash de senha
+arquivo com id unico gerado para cada conta conta com saldo
+sistema com programaçao orientada a objeto
+  deve consultar bd de agencia para certificar da existencia dela
+    deve validar conta/senha no bd da agencia
       acessar saldos, fazer transferencias, saques, salvar respectivos arquivos
 sistema gerente / cx presencial
   abrir contas / fechar
     depositar/sacar valores, salvar alteraçoes.
     
 arquivos dados devem ser salvos
-dados devem ser consizentes com o estipulado
-
+dados devem ser consistentes com o estipulado
+criar testes para codigo
