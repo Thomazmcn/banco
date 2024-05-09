@@ -14,3 +14,19 @@ dados devem ser consistentes com o estipulado
 criar testes para codigo
 
 GUI
+Janela login
+
+Menu_adm()
+    criar_ag()
+    criar_conta()
+    editar_conta()
+    apagar_conta()
+    
+Menu_cliente()    
+    editar_senha(clientes_temp)
+    transferir(clientes_temp)
+    sacar(clientes_temp)
+    depositar(clientes_temp)
+    saldo(clientes_temp)
+    fechar_conta(clientes_temp)
+#A soluçao adotada no codigo original carregava a variavel cliente_temp para as outras funçoes, facilitando     

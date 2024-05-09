@@ -19,7 +19,7 @@ def Main():
     elif ag_temp in agencias:
         cc_temp = input('\nDigite sua conta:')
         senha_temp = input('\nDigite sunha senha:')
-        clientes_temp = [ag_temp,cc_temp]
+        clientes_temp = [ag_temp,cc_temp] #variavel criada para possibilitar a identificaçao pos logon. 
         
         if clientes_temp in clientes:
             indice = clientes.index(clientes_temp)
