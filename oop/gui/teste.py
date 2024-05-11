@@ -1,10 +1,14 @@
 import tkinter as tk
-import customtkinter
+import customtkinter as cstk
 
 
-class CustomTkinterWindow(tk.Tk):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+
+cstk.set_default_color_theme("dark-blue")
+cstk.set_appearance_mode("dark")
+
+class CustomTkinterWindow(cstk.CTk):
+    def __init__(self):
+        super().__init__()
         self.geometry("400x240")
         self.title("CustomTkinter Test")
 
@@ -13,10 +17,8 @@ class CustomTkinterWindow(tk.Tk):
             print("Button pressed")
 
         # Usando CTkButton em vez de Button padrão do tkinter
-        button = customtkinter.CTkButton(
-            master=self, corner_radius=10, command=button_function
-        )
-        button.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
+        button = cstk.CTkButton(master=self, corner_radius=10, command=button_function)
+        button.place(relx=0.5, rely=0.5, anchor=cstk.CENTER)
 
 
 if __name__ == "__main__":
