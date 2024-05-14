@@ -1,6 +1,9 @@
-bd sql contendo agencias existentes
-bd sql por agencia contendo suas contas com hash de senha
-arquivo com id unico gerado para cada conta conta com saldo
+bd sql:
+
+id	ag	ac	Hash	salt	balance		cedit			debt			from/to
+ag+cc	n	n	****	****	result		dict{date:value}	dict{date:value}	list[(ag,cc)]
+
+
 sistema com programaçao orientada a objeto
   deve consultar bd de agencia para certificar da existencia dela
     deve validar conta/senha no bd da agencia

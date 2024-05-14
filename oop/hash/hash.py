@@ -1,5 +1,6 @@
 import hashlib
 import os
+import psycopg2
 
 
 def hash_password(user_pass):
@@ -10,6 +11,33 @@ def hash_password(user_pass):
     hash.update(password + salt)  # Adicionando a senha e o salt ao objeto hash
 
     return hash.hexdigest(), salt
+
+
+def four_numbers_bank_agency():
+    agency_n_4dig = False
+    message_ag = "Enter your agency number: "
+    while agency_n_4dig is False:
+        input_ag_num = input(message_ag)
+        valid_ag_n = len(input_ag_num) == 4 and input_ag_num.isdigit()
+        if valid_ag_n:
+            agency_n_4dig = True
+            return input_ag_num
+        else:
+            message_ag = "Agency number consist of 4 numbers."
+
+
+def valid_account():
+    # search for agency number on db
+    account_n_6dig = False
+    message_acc = "Enter your account number: "
+    while account_n_6dig is False:
+        input_acc_num = input(message_acc)
+        valid_acc_n = len(input_acc_num) == 4 and input_acc_num.isdigit()
+        if valid_acc_n:
+            account_n_6dig = True
+            return input_acc_num
+        else:
+            pass
 
 
 def verify_pass(password_input, hash_db, salt_db):
@@ -44,7 +72,9 @@ def new_secret():
             )
 
 
+"""
+login()
 senha = new_secret()
 hash_test, salt_test = hash_password(senha)
 senha_test = input("senha test:\n")
-print(verify_pass(senha_test, hash_test, salt_test))
+print(verify_pass(senha_test, hash_test, salt_test))"""
