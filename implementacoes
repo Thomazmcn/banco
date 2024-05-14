@@ -1,6 +1,6 @@
 bd sql:
 
-id	ag	ac	Hash	salt	balance		cedit			debt			from/to
+id	ag	ac	Hash	salt	balance		credit			debt			from/to
 ag+cc	n	n	****	****	result		dict{date:value}	dict{date:value}	list[(ag,cc)]
 
 
