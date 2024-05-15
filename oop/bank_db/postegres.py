@@ -1,5 +1,6 @@
 import psycopg2
 
+
 hostname = "127.0.0.1"
 database = "bank_db"
 username = "postgres"
